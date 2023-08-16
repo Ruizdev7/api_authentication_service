@@ -1,0 +1,8067 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"description": "This API provides the Plena Global Holdings software development team with the necessary knowledge base for the integration of the different applications with the services offered by the Maintenance Department.",
+		"version": "1.0.0",
+		"title": "MAINTENANCE & ENVIROMENTAL DEPARTMENT API",
+		"license": {
+			"name": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	},
+	"servers": [
+		{
+			"url": "/api/v1/"
+		}
+	],
+	"components": {
+		"schemas": {
+			"tbl_auxiliary_staff": {
+				"type": "object",
+				"properties": {
+					"ccn_auxiliary_staff": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a fixed asset within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_two": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a fixed asset within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_three": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a fixed asset within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_four": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a fixed asset within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_five": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that corresponds to the unique consecutive numerical code (CCN) of an employee within the database. It allows to associate up to 5 maintenance team members to manage the associated order. (*) mandatory"
+					}
+				}
+			},
+			"tbl_auxiliary_staff_go": {
+				"type": "object",
+				"properties": {
+					"ccn_auxiliary_staff_go": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_generic_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the generic order within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_two": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the generic order within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_three": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the generic order within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_four": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the generic order within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_five": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that corresponds to the unique consecutive numerical code (CCN) of an employee within the database. It allows to associate up to 5 maintenance team members to manage the associated order. (*) mandatory"
+					}
+				}
+			},
+			"tbl_auxiliary_staff_hn": {
+				"type": "object",
+				"properties": {
+					"ccn_auxiliary_staff": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_hidraulic_network_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a hidraulic_network within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_two": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a hidraulic_network within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_three": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a hidraulic_network within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_four": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a hidraulic_network within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_five": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a hidraulic_network within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					}
+				}
+			},
+			"tbl_auxiliary_staff_infrastructure": {
+				"type": "object",
+				"properties": {
+					"ccn_auxiliary_staff_infrastructure": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a infrastructure within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_two": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a infrastructure within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_three": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a infrastructure within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_four": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a infrastructure within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					},
+					"technical_five": {
+						"type": "number",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": "Integer number that identifies the work order associated with the maintenance of a infrastructure within the database (*) mandatory, Once the order is created, the record in this table will be automatically set with CCN 10000, which allows leaving the field free if the created order does not require other team members to process it."
+					}
+				}
+			},
+			"tbl_central_hall_and_others": {
+				"type": "object",
+				"properties": {
+					"ccn_central_hall_and_others": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Loza de concreto y juntas",
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "BUEN ESTADO - FUNCIONAL",
+						"description": ""
+					},
+					"type of improvement": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 255,
+						"example": "Tipo de mantenimiento o mejora a realizar",
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 255,
+						"example": "Notes",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 255,
+						"example": "Notes",
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 255,
+						"example": "Notes",
+						"description": "Nombre de la imagen asociada"
+					}
+				}
+			},
+			"tbl_clonacion": {
+				"type": "object",
+				"properties": {
+					"ccn_clonacion": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"connection_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					}
+				}
+			},
+			"tbl_cloning_room_ip2_ip3A_ip3B": {
+				"type": "object",
+				"properties": {
+					"ccn_cloning_room_ip2_ip3A_ip3B": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"state": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"type of improvement": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_images": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					}
+				}
+			},
+			"tbl_covers": {
+				"type": "object",
+				"properties": {
+					"ccn_covers": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"state": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"type of improvement": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_images": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					}
+				}
+			},
+			"tbl_definite_generic_order": {
+				"type": "object",
+				"properties": {
+					"ccn_definite_generic_order": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_generic_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"activity_executed": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"first_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"last_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"spare_parts_used": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"entry_day": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"action_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"finish_date": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"manual_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"automatic_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"get_voltage_and_current_parameters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"apply_the_5_golden_rules_of_electrical_work": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"measurement_of_isulation_and_resistance_all_components": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"visual_inspection_and_components_condition": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"review_status_and_sensors_operation": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_torque_and_condition_of_all_screws_and_fasteners": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_straps": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_of_bearings_or_seals": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_and_or_change_of_Filters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_pos_adj_switches": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_liquid_level": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_cleaning": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_lubrication": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_manual_and_or_automatic_tests_again": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					}
+				}
+			},
+			"tbl_definite_hidraulic_network": {
+				"type": "object",
+				"properties": {
+					"ccn_definite_order_hn": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_order_hidraulic_network": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"activity_executed": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"first_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"last_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"spare_parts_used": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"entry_day": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"action_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"finish_date": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"manual_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"automatic_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"get_voltage_and_current_parameters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"apply_the_5_golden_rules_of_electrical_work": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"measurement_of_isulation_and_resistance_all_components": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"visual_inspection_and_components_condition": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"review_status_and_sensors_operation": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_torque_and_condition_of_all_screws_and_fasteners": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_straps": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_of_bearings_or_seals": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_and_or_change_of_Filters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_pos_adj_switches": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_liquid_level": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_cleaning": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_lubrication": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_manual_and_or_automatic_tests_again": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					}
+				}
+			},
+			"tbl_definite_order_infrastructure": {
+				"type": "object",
+				"properties": {
+					"ccn_definite_order_infrastructure": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_order_infrastructure": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"activity_executed": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"first_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"last_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"spare_parts_used": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"entry_day": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"action_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"finish_date": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"manual_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"automatic_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"get_voltage_and_current_parameters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"apply_the_5_golden_rules_of_electrical_work": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"measurement_of_isulation_and_resistance_all_components": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"visual_inspection_and_components_condition": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"review_status_and_sensors_operation": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_torque_and_condition_of_all_screws_and_fasteners": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_straps": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_of_bearings_or_seals": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_and_or_change_of_Filters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_pos_adj_switches": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_liquid_level": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_cleaning": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_lubrication": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_manual_and_or_automatic_tests_again": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					}
+				}
+			},
+			"tbl_definite_order": {
+				"type": "object",
+				"properties": {
+					"ccn_definite_order": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_order": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_fixed_asset": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"activity_executed": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"first_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"last_image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"spare_parts_used": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"entry_day": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"action_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"finish_date": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"manual_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"automatic_tests": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"get_voltage_and_current_parameters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"apply_the_5_golden_rules_of_electrical_work": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"measurement_of_isulation_and_resistance_all_components": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"visual_inspection_and_components_condition": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"review_status_and_sensors_operation": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_torque_and_condition_of_all_screws_and_fasteners": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_straps": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_condition_and_or_change_of_bearings_or_seals": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_and_or_change_of_Filters": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_pos_adj_switches": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"check_status_liquid_level": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_cleaning": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"carry_out_lubrication": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"second_image": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"third_image": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"first_file": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"second_file": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"third_file": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"fourth_file": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					},
+					"fifth_file": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 3,
+						"description": ""
+					}
+				}
+			},
+			"tbl_dryer_1": {
+				"type": "object",
+				"properties": {
+					"ccn_dryer_1": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					}
+				}
+			},
+			"tbl_dryer_2": {
+				"type": "object",
+				"properties": {
+					"ccn_dryer_1": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					}
+				}
+			},
+			"tbl_electrical_technical_room": {
+				"type": "object",
+				"properties": {
+					"ccn_electrical_technical_room": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					}
+				}
+			},
+			"tbl_ENG_SOP007_F02": {
+				"type": "object",
+				"properties": {
+					"ccn_ENG_SOP007_F02": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_emloyee": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"entry_day": {
+						"type": "date",
+						"minimum": 1,
+						"maximum": 10000,
+						"example": 1,
+						"description": ""
+					},
+					"action_date": {
+						"type": "date",
+						"minimum": 1,
+						"maximum": 100,
+						"example": "Fans",
+						"description": ""
+					},
+					"finish_date": {
+						"type": "date",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					},
+					"ccn_order_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": "OK",
+						"description": ""
+					}
+				}
+			},
+			"tbl_ENG_SOP007_F02_detail": {
+				"type": "object",
+				"properties": {
+					"ccn_ENG_SOP007_F02_detail": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_ENG_SOP007_F02": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"valve_position": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"visual_inspection_of_tanks": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"electronic_board_inspection": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"level_inspection_mixing_drums": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"dosing_pump_flow_inspection": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"aeration_tower_inspection": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"dosing_pump_metering": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"B1_pump_gauge": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"visual_inspection_of_settler": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"visual_inspection_of_clarifying_water_tank": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"filter_train_cartridge_inspection": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"gauge_reading_prior_to_backwash": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"day_controller_reading": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"inspection_of_filling_of_distribution_tanks_and_CV4": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_image": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_facades": {
+				"type": "object",
+				"properties": {
+					"ccn_facades": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"state": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observations": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_images": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_fin_and_deri_producto_room": {
+				"type": "object",
+				"properties": {
+					"ccn_finished_and_derivative_producto_room": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"state": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observations": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_fixed_asset": {
+				"type": "object",
+				"properties": {
+					"ccn_fixed_asset": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"id_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"zone_fixed_asset": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"room_fixed_asset": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"description_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"brand_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"serial_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"model_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_periodicity": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"initial_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_range_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"actual_maintenance_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"initial_date_2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_range_date_2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"is_active": {
+						"type": "boolean",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"health_and_environmental_safety": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"product_quality": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"perform_the_production": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_time": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"qualification": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_generic_order": {
+				"type": "object",
+				"properties": {
+					"ccn_generic_order": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_employee": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_zone": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_room": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"description_generic_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"task": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_type_id_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"projected_time": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_order_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ticket_number": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"assigned_by": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_greenhouse_entrance_lock_A2": {
+				"type": "object",
+				"properties": {
+					"ccn_greenhouse_entrance_lock_A2": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"state": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observations": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_images": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_hidraulic_network": {
+				"type": "object",
+				"properties": {
+					"ccn_hidraulic_network": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"id_hidraulic_network": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"zone_hidraulic_network": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"room_hidraulic_network": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"description_hidraulic_network": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"brand_hidraulic_network": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"serial_hidraulic_network": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"model_hidraulic_network": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_periodicity": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"initial_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_range_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"actual_maintenance_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"initial_date_2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_range_date_2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"is_active": {
+						"type": "boolean",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_infrastructure": {
+				"type": "object",
+				"properties": {
+					"ccn_infrastructure": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"id_infrastructure": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"zone_infrastructure": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"room_infrastructure": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"description_infrastructure": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_periodicity": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"initial_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_range_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"actual_maintenance_date": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"initial_date_2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maintenance_range_date_2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"image": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"is_active": {
+						"type": "boolean",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_1": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_1": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_104": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_104": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_11": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_11": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_12": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_12": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_13": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_13": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_14": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_14": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_15": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_15": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_ip_16": {
+				"type": "object",
+				"properties": {
+					"ccn_ip_16": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_recurring_order": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_auto": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"opera_manual": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"strange_noises": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"working_status": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"quantity_of_equipments": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_IT_technical_room": {
+				"type": "object",
+				"properties": {
+					"ccn_IT_technical_room": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"state": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_laboratory_QC": {
+				"type": "object",
+				"properties": {
+					"ccn_laboratory_QC": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"state": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_mother_plants": {
+				"type": "object",
+				"properties": {
+					"ccn_mother_plants": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_richel_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"equipment": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"state": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"type_of_improvement": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_observations": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"general_images": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_operation_variables": {
+				"type": "object",
+				"properties": {
+					"ccn_operation_variables": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"id_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"tension_fixed_asset": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"electricCurrent_fixed_asset2": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"potency_fixed_asset": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"frecuency_fixed_asset": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"connection_fixed_asset2": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maximumTemperatureOperation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"minimunTemperatureOperation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"maximumPressureOperation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"speedRangeOperation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"cubicFeetPerMinuteOperation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"controlSystem": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_order": {
+				"type": "object",
+				"properties": {
+					"ccn_order": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_employee": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_zone": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_room": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"id_fixed_asset": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"task": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_type_id_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"projected_time": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_order_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_manager": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"acceptance_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"manager_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ticket_number": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"assigned_by": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_order_infrastructure": {
+				"type": "object",
+				"properties": {
+					"ccn_order_infrastructure": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_employee": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_zone": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_room": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"id_infrastructure": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"task": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_type_id_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"projected_time": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_order_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_manager": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"acceptance_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"manager_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ticket_number": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"assigned_by": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			},
+			"tbl_order_hidraulic_network": {
+				"type": "object",
+				"properties": {
+					"ccn_order_hidraulic_network": {
+						"type": "integer",
+						"example": 1,
+						"description": "Incremental integer number assigned by the system automatically when recording a new record."
+					},
+					"ccn_employee": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_zone": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_room": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"id_hidraulic_network": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"task": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_type_id_of_maintenance": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"projected_time": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_order_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ccn_manager": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"acceptance_status": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"manager_observation": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"ticket_number": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					},
+					"assigned_by": {
+						"type": "string",
+						"minimum": 1,
+						"maximum": 50,
+						"example": 1,
+						"description": ""
+					}
+				}
+			}
+		}
+	},
+	"paths": {
+		"/auxiliary_staff": {
+			"get": {
+				"tags": [
+					"auxiliary_staff"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff_go": {
+			"get": {
+				"tags": [
+					"auxiliary_staff_go"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff_hn": {
+			"get": {
+				"tags": [
+					"auxiliary_staff_hn"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff_infrastructure": {
+			"get": {
+				"tags": [
+					"auxiliary_staff_infrastructure"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					}
+				}
+			}
+		},
+		"/central_hall_and_others": {
+			"get": {
+				"tags": [
+					"central_hall_and_others"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					}
+				}
+			}
+		},
+		"/clonacion": {
+			"get": {
+				"tags": [
+					"clonacion"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					}
+				}
+			}
+		},
+		"/cloning_room_ip2_ip3A_ip3B": {
+			"get": {
+				"tags": [
+					"cloning_room_ip2_ip3A_ip3B"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					}
+				}
+			}
+		},
+		"/covers": {
+			"get": {
+				"tags": [
+					"covers"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					}
+				}
+			}
+		},
+		"/definite_generic_order": {
+			"get": {
+				"tags": [
+					"definite_generic_order"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					}
+				}
+			}
+		},
+		"/definite_hidraulic_network": {
+			"get": {
+				"tags": [
+					"definite_hidraulic_network"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					}
+				}
+			}
+		},
+		"/definite_order_infrastructure": {
+			"get": {
+				"tags": [
+					"definite_order_infrastructure"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/definite_order": {
+			"get": {
+				"tags": [
+					"definite_order"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					}
+				}
+			}
+		},
+		"/dryer_1": {
+			"get": {
+				"tags": [
+					"dryer_1"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					}
+				}
+			}
+		},
+		"/dryer_2": {
+			"get": {
+				"tags": [
+					"dryer_2"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					}
+				}
+			}
+		},
+		"/electrical_technical_room": {
+			"get": {
+				"tags": [
+					"electrical_technical_room"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					}
+				}
+			}
+		},
+		"/ENG_SOP007_F02": {
+			"get": {
+				"tags": [
+					"ENG_SOP007_F02"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					}
+				}
+			}
+		},
+		"/ENG_SOP007_F02_detail": {
+			"get": {
+				"tags": [
+					"ENG_SOP007_F02_detail"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					}
+				}
+			}
+		},
+		"/facades": {
+			"get": {
+				"tags": [
+					"facades"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					}
+				}
+			}
+		},
+		"/fin_and_deri_producto_room": {
+			"get": {
+				"tags": [
+					"fin_and_deri_producto_room"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					}
+				}
+			}
+		},
+		"/fixed_asset": {
+			"get": {
+				"tags": [
+					"fixed_asset"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					}
+				}
+			}
+		},
+		"/generic_order": {
+			"get": {
+				"tags": [
+					"generic_order"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					}
+				}
+			}
+		},
+		"/greenhouse_entrance_lock_A2": {
+			"get": {
+				"tags": [
+					"greenhouse_entrance_lock_A2"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					}
+				}
+			}
+		},
+		"/hidraulic_network": {
+			"get": {
+				"tags": [
+					"hidraulic_network"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					}
+				}
+			}
+		},
+		"/infrastructure": {
+			"get": {
+				"tags": [
+					"infrastructure"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/ip_1": {
+			"get": {
+				"tags": [
+					"ip_1"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					}
+				}
+			}
+		},
+		"/ip_11": {
+			"get": {
+				"tags": [
+					"ip_11"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					}
+				}
+			}
+		},
+		"/ip_12": {
+			"get": {
+				"tags": [
+					"ip_12"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					}
+				}
+			}
+		},
+		"/ip_13": {
+			"get": {
+				"tags": [
+					"ip_13"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_13"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_13"
+						}
+					}
+				}
+			}
+		},
+		"/ip_14": {
+			"get": {
+				"tags": [
+					"ip_14"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					}
+				}
+			}
+		},
+		"/ip_15": {
+			"get": {
+				"tags": [
+					"ip_15"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					}
+				}
+			}
+		},
+		"/ip_16": {
+			"get": {
+				"tags": [
+					"ip_16"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					}
+				}
+			}
+		},
+		"/ip_104": {
+			"get": {
+				"tags": [
+					"ip_104"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					}
+				}
+			}
+		},
+		"/IT_technical_room": {
+			"get": {
+				"tags": [
+					"IT_technical_room"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					}
+				}
+			}
+		},
+		"/laboratory_QC": {
+			"get": {
+				"tags": [
+					"laboratory_QC"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					}
+				}
+			}
+		},
+		"/mother_plants": {
+			"get": {
+				"tags": [
+					"mother_plants"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					}
+				}
+			}
+		},
+		"/operation_variables": {
+			"get": {
+				"tags": [
+					"operation_variables"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					}
+				}
+			}
+		},
+		"/order": {
+			"get": {
+				"tags": [
+					"order"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order"
+						}
+					}
+				}
+			}
+		},
+		"/order_infrastructure": {
+			"get": {
+				"tags": [
+					"order_infrastructure"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/order_hidraulic_network": {
+			"get": {
+				"tags": [
+					"order_hidraulic_network"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff/{ccn_auxiliary_staff}": {
+			"get": {
+				"tags": [
+					"auxiliary_staff"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for fixed assets",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"auxiliary_staff"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for fixed assets.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "Update Existing todo On Database",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_auxiliary_staff"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"auxiliary_staff"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff_go/{ccn_auxiliary_staff_go}": {
+			"get": {
+				"tags": [
+					"auxiliary_staff_go"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_go",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for Generic Orders",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"auxiliary_staff_go"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_go",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for generic orders.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"auxiliary_staff_go"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_go",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_go"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff/{ccn_auxiliary_staff_hn}": {
+			"get": {
+				"tags": [
+					"auxiliary_staff_hn"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_hn",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for hidraulic network",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"auxiliary_staff_hn"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_hn",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for hidraulic network.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"auxiliary_staff_hn"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_hn"
+						}
+					}
+				}
+			}
+		},
+		"/auxiliary_staff/{ccn_auxiliary_staff_infrastructure}": {
+			"get": {
+				"tags": [
+					"auxiliary_staff_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"auxiliary_staff_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"auxiliary_staff_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_auxiliary_staff_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_auxiliary_staff_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/central_hall_and_others/{ccn_central_hall_and_others}": {
+			"get": {
+				"tags": [
+					"central_hall_and_others"
+				],
+				"parameters": [
+					{
+						"name": "ccn_central_hall_and_others",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"central_hall_and_others"
+				],
+				"parameters": [
+					{
+						"name": "ccn_central_hall_and_others",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_central_hall_and_others"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"central_hall_and_others"
+				],
+				"parameters": [
+					{
+						"name": "ccn_central_hall_and_others",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_central_hall_and_others"
+						}
+					}
+				}
+			}
+		},
+		"/clonacion/{ccn_clonacion}": {
+			"get": {
+				"tags": [
+					"clonacion"
+				],
+				"parameters": [
+					{
+						"name": "ccn_clonacion",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"clonacion"
+				],
+				"parameters": [
+					{
+						"name": "ccn_clonacion",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_clonacion"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"clonacion"
+				],
+				"parameters": [
+					{
+						"name": "ccn_clonacion",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_clonacion"
+						}
+					}
+				}
+			}
+		},
+		"/cloning_room_ip2_ip3A_ip3B/{ccn_cloning_room_ip2_ip3A_ip3B}": {
+			"get": {
+				"tags": [
+					"cloning_room_ip2_ip3A_ip3B"
+				],
+				"parameters": [
+					{
+						"name": "ccn_cloning_room_ip2_ip3A_ip3B",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"cloning_room_ip2_ip3A_ip3B"
+				],
+				"parameters": [
+					{
+						"name": "ccn_cloning_room_ip2_ip3A_ip3B",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"cloning_room_ip2_ip3A_ip3B"
+				],
+				"parameters": [
+					{
+						"name": "ccn_cloning_room_ip2_ip3A_ip3B",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_cloning_room_ip2_ip3A_ip3B"
+						}
+					}
+				}
+			}
+		},
+		"/covers/{ccn_covers}": {
+			"get": {
+				"tags": [
+					"covers"
+				],
+				"parameters": [
+					{
+						"name": "ccn_covers",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"covers"
+				],
+				"parameters": [
+					{
+						"name": "ccn_covers",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_covers"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"covers"
+				],
+				"parameters": [
+					{
+						"name": "ccn_covers",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_covers"
+						}
+					}
+				}
+			}
+		},
+		"/definite_generic_order/{ccn_definite_generic_order}": {
+			"get": {
+				"tags": [
+					"definite_generic_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"definite_generic_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_definite_generic_order"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"definite_generic_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_generic_order"
+						}
+					}
+				}
+			}
+		},
+		"/definite_hidraulic_network/{ccn_definite_hidraulic_network}": {
+			"get": {
+				"tags": [
+					"definite_hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"definite_hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"definite_hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_hidraulic_network"
+						}
+					}
+				}
+			}
+		},
+		"/definite_order_infrastructure/{ccn_definite_order_infrastructure}": {
+			"get": {
+				"tags": [
+					"definite_order_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_order_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"definite_order_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_order_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"definite_order_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_order_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/definite_order/{ccn_definite_order}": {
+			"get": {
+				"tags": [
+					"definite_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"definite_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_definite_order"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"definite_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_definite_order",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_definite_order"
+						}
+					}
+				}
+			}
+		},
+		"/dryer_1/{ccn_dryer_1}": {
+			"get": {
+				"tags": [
+					"dryer_1"
+				],
+				"parameters": [
+					{
+						"name": "ccn_dryer_1",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"dryer_1"
+				],
+				"parameters": [
+					{
+						"name": "ccn_dryer_1",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_dryer_1"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"dryer_1"
+				],
+				"parameters": [
+					{
+						"name": "ccn_dryer_1",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_1"
+						}
+					}
+				}
+			}
+		},
+		"/dryer_2/{ccn_dryer_2}": {
+			"get": {
+				"tags": [
+					"dryer_2"
+				],
+				"parameters": [
+					{
+						"name": "ccn_dryer_2",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"dryer_2"
+				],
+				"parameters": [
+					{
+						"name": "ccn_dryer_2",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_dryer_2"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"dryer_2"
+				],
+				"parameters": [
+					{
+						"name": "ccn_dryer_2",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_dryer_2"
+						}
+					}
+				}
+			}
+		},
+		"/electrical_technical_room/{ccn_electrical_technical_room}": {
+			"get": {
+				"tags": [
+					"electrical_technical_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_electrical_technical_room",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"electrical_technical_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_electrical_technical_room",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_electrical_technical_room"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"electrical_technical_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_electrical_technical_room",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_electrical_technical_room"
+						}
+					}
+				}
+			}
+		},
+		"/ENG_SOP007_F02/{ccn_ENG_SOP007_F02}": {
+			"get": {
+				"tags": [
+					"ENG_SOP007_F02"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ENG_SOP007_F02",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ENG_SOP007_F02"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ENG_SOP007_F02",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ENG_SOP007_F02"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ENG_SOP007_F02",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02"
+						}
+					}
+				}
+			}
+		},
+		"/ENG_SOP007_F02_detail/{ccn_ENG_SOP007_F02_detail}": {
+			"get": {
+				"tags": [
+					"ENG_SOP007_F02_detail"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ENG_SOP007_F02_detail",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ENG_SOP007_F02_detail"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ENG_SOP007_F02_detail",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ENG_SOP007_F02_detail"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ENG_SOP007_F02_detail",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ENG_SOP007_F02_detail"
+						}
+					}
+				}
+			}
+		},
+		"/facades/{ccn_facades}": {
+			"get": {
+				"tags": [
+					"facades"
+				],
+				"parameters": [
+					{
+						"name": "ccn_facades",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"facades"
+				],
+				"parameters": [
+					{
+						"name": "ccn_facades",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_facades"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"facades"
+				],
+				"parameters": [
+					{
+						"name": "ccn_facades",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_facades"
+						}
+					}
+				}
+			}
+		},
+		"/fin_and_deri_producto_room/{ccn_finished_and_derivative_producto_room}": {
+			"get": {
+				"tags": [
+					"fin_and_deri_producto_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_finished_and_derivative_producto_room",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"fin_and_deri_producto_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_finished_and_derivative_producto_room",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"fin_and_deri_producto_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_finished_and_derivative_producto_room",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fin_and_deri_producto_room"
+						}
+					}
+				}
+			}
+		},
+		"/fixed_asset/{ccn_fixed_asset}": {
+			"get": {
+				"tags": [
+					"fixed_asset"
+				],
+				"parameters": [
+					{
+						"name": "ccn_fixed_asset",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"fixed_asset"
+				],
+				"parameters": [
+					{
+						"name": "ccn_fixed_asset",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_fixed_asset"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"fixed_asset"
+				],
+				"parameters": [
+					{
+						"name": "ccn_fixed_asset",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_fixed_asset"
+						}
+					}
+				}
+			}
+		},
+		"/generic_order/{ccn_generic_order}": {
+			"get": {
+				"tags": [
+					"generic_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"generic_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_generic_order"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"generic_order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					}
+				}
+			}
+		},
+		"/greenhouse_entrance_lock_A2/{ccn_greenhouse_entrance_lock_A2}": {
+			"get": {
+				"tags": [
+					"greenhouse_entrance_lock_A2"
+				],
+				"parameters": [
+					{
+						"name": "ccn_greenhouse_entrance_lock_A2",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"greenhouse_entrance_lock_A2"
+				],
+				"parameters": [
+					{
+						"name": "ccn_greenhouse_entrance_lock_A2",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"greenhouse_entrance_lock_A2"
+				],
+				"parameters": [
+					{
+						"name": "ccn_greenhouse_entrance_lock_A2",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_greenhouse_entrance_lock_A2"
+						}
+					}
+				}
+			}
+		},
+		"/hidraulic_network/{ccn_hidraulic_network}": {
+			"get": {
+				"tags": [
+					"hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_hidraulic_network"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_hidraulic_network"
+						}
+					}
+				}
+			}
+		},
+		"/infrastructure/{ccn_infrastructure}": {
+			"get": {
+				"tags": [
+					"infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_infrastructure"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/ip_1/{ccn_ip_1}": {
+			"get": {
+				"tags": [
+					"ip_1"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_1",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_1"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_1",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_1"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_1"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_1",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_1"
+						}
+					}
+				}
+			}
+		},
+		"/ip_104/{ccn_ip_104}": {
+			"get": {
+				"tags": [
+					"ip_104"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_104",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_104"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_104",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_104"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_104"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_104",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_104"
+						}
+					}
+				}
+			}
+		},
+		"/ip_11/{ccn_ip_11}": {
+			"get": {
+				"tags": [
+					"ip_11"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_11",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_11"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_11",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_11"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_11"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_11",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_11"
+						}
+					}
+				}
+			}
+		},
+		"/ip_12/{ccn_ip_12}": {
+			"get": {
+				"tags": [
+					"ip_12"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_12",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_12"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_12",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_12"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_12"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_12",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					}
+				}
+			}
+		},
+		"/ip_13/{ccn_ip_13}": {
+			"get": {
+				"tags": [
+					"ip_13"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_13",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_13"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_13"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_13"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_13",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_13"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_13"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_13"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_13"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_12",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_12"
+						}
+					}
+				}
+			}
+		},
+		"/ip_14/{ccn_ip_14}": {
+			"get": {
+				"tags": [
+					"ip_14"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_14",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_14"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_14",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_14"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_14"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_14",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_14"
+						}
+					}
+				}
+			}
+		},
+		"/ip_15/{ccn_ip_15}": {
+			"get": {
+				"tags": [
+					"ip_15"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_15",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_15"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_15",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_15"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_15"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_15",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_15"
+						}
+					}
+				}
+			}
+		},
+		"/ip_16/{ccn_ip_16}": {
+			"get": {
+				"tags": [
+					"ip_16"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_16",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"ip_16"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_16",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_ip_16"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ip_16"
+				],
+				"parameters": [
+					{
+						"name": "ccn_ip_16",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_ip_16"
+						}
+					}
+				}
+			}
+		},
+		"/IT_technical_room/{ccn_IT_technical_room}": {
+			"get": {
+				"tags": [
+					"IT_technical_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_IT_technical_room",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"IT_technical_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_IT_technical_room",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_IT_technical_room"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"IT_technical_room"
+				],
+				"parameters": [
+					{
+						"name": "ccn_IT_technical_room",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_IT_technical_room"
+						}
+					}
+				}
+			}
+		},
+		"/laboratory_QC/{ccn_laboratory_QC}": {
+			"get": {
+				"tags": [
+					"laboratory_QC"
+				],
+				"parameters": [
+					{
+						"name": "ccn_laboratory_QC",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"laboratory_QC"
+				],
+				"parameters": [
+					{
+						"name": "ccn_laboratory_QC",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_laboratory_QC"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"laboratory_QC"
+				],
+				"parameters": [
+					{
+						"name": "ccn_laboratory_QC",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_laboratory_QC"
+						}
+					}
+				}
+			}
+		},
+		"/mother_plants/{ccn_mother_plants}": {
+			"get": {
+				"tags": [
+					"mother_plants"
+				],
+				"parameters": [
+					{
+						"name": "ccn_mother_plants",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"mother_plants"
+				],
+				"parameters": [
+					{
+						"name": "ccn_mother_plants",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_mother_plants"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"mother_plants"
+				],
+				"parameters": [
+					{
+						"name": "ccn_mother_plants",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_mother_plants"
+						}
+					}
+				}
+			}
+		},
+		"/operation_variables/{ccn_operation_variables}": {
+			"get": {
+				"tags": [
+					"operation_variables"
+				],
+				"parameters": [
+					{
+						"name": "ccn_operation_variables",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"operation_variables"
+				],
+				"parameters": [
+					{
+						"name": "ccn_operation_variables",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_operation_variables"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"operation_variables"
+				],
+				"parameters": [
+					{
+						"name": "ccn_operation_variables",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_operation_variables"
+						}
+					}
+				}
+			}
+		},
+		"/order/{ccn_order}": {
+			"get": {
+				"tags": [
+					"order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_generic_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_generic_order"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_order"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"order"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order"
+						}
+					}
+				}
+			}
+		},
+		"/order_infrastructure/{ccn_order_infrastructure}": {
+			"get": {
+				"tags": [
+					"order_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"order_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_order_infrastructure"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"order_infrastructure"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order_infrastructure",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_infrastructure"
+						}
+					}
+				}
+			}
+		},
+		"/order_hidraulic_network/{ccn_order_hidraulic_network}": {
+			"get": {
+				"tags": [
+					"order_hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to a maintenance order for infrastructures",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"order_hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction that associates a work team to an update maintenance order for infrastructures.",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"description": "No description",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"order_hidraulic_network"
+				],
+				"parameters": [
+					{
+						"name": "ccn_order_hidraulic_network",
+						"in": "path",
+						"description": "CCN of the transaction to be deleted",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					},
+					"404": {
+						"description": "NOT FOUND",
+						"schema": {
+							"$ref": "#/components/schemas/tbl_order_hidraulic_network"
+						}
+					}
+				}
+			}
+		}
+	}
+}
